@@ -30,4 +30,4 @@ RUN set -x && \
 EXPOSE 8080
 VOLUME /data
 WORKDIR /data
-CMD sqlite_web -H 0.0.0.0 -x $SQLITE_DATABASE
+CMD sqlite_web -H 0.0.0.0 -x $SQLITE_DATABASE -u $URL_PREFIX
