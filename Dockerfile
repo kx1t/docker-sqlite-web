@@ -25,7 +25,7 @@ RUN set -x && \
 # Install all the KEPT packages (+ pkgconfig):
     apt-get update && \
     apt-get install -o APT::Autoremove::RecommendsImportant=0 -o APT::Autoremove::SuggestsImportant=0 -o Dpkg::Options::="--force-confold" -y --no-install-recommends  --no-install-suggests\
-        {TEMP_PACKAGES[@]} {KEPT_PACKAGES[@]} && \
+        ${TEMP_PACKAGES[@]} ${KEPT_PACKAGES[@]} && \
     update-alternatives --install /usr/bin/python python /usr/bin/python3 1 && \
     pip install ${KEPT_PIP_PACKAGES[@]}
 
