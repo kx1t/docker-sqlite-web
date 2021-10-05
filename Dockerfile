@@ -1,4 +1,4 @@
-FROM debian:buster-20210902-slim
+FROM debian:buster-20210927-slim
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
@@ -30,4 +30,4 @@ RUN set -x && \
 EXPOSE 8080
 VOLUME /data
 WORKDIR /data
-CMD sqlite_web -H 0.0.0.0 -x $SQLITE_DATABASE -u $URL_PREFIX
+CMD sqlite_web -H 0.0.0.0 -x $SQLITE_DATABASE -u $URL_PREFIX $EXTRA_ARGS
