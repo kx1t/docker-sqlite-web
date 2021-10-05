@@ -21,7 +21,9 @@ services:
         - 8080:8080
         environment:
         - SQLITE_DATABASE=sqlite.db
+        - URL_PREFIX=/acarsdb
+        - EXTRA_ARGS=-r
     volumes:
         - /dir/to/database/file:/data
 ```
-Replace here the directory to your database file in the `volumes:` section, and the name of the database file in the `SQLITE_DATABASE` env variable.
+Replace here the directory to your database file in the `volumes:` section, and the name of the database file in the `SQLITE_DATABASE` env variable. `URL_PREFIX` determines what the "root" is of your web page, and pass in any extra arguments (like `-r` for read-only) using the `EXTRA_ARGS` parameter.
