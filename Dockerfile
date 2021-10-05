@@ -17,8 +17,8 @@ RUN set -x && \
     KEPT_PACKAGES+=(python3) && \
     KEPT_PACKAGES+=(psmisc) && \
     KEPT_PACKAGES+=(procps nano) && \
-    KEPT_PACKAGES+=(python-pip) && \
-    KEPT_PACKAGES+=(python-setuptools) && \
+    KEPT_PACKAGES+=(python3-pip) && \
+    KEPT_PACKAGES+=(python3-setuptools) && \
     KEPT_PIP_PACKAGES+=(sqlite-web) && \
     echo ${TEMP_PACKAGES[*]} > /tmp/vars.tmp && \
 #
