@@ -14,7 +14,7 @@ RUN set -x && \
     TEMP_PACKAGES+=(file) && \
     KEPT_PACKAGES+=(curl) && \
     KEPT_PACKAGES+=(ca-certificates) && \
-    KEPT_PACKAGES=+(python3) && \
+    KEPT_PACKAGES+=(python3) && \
     KEPT_PACKAGES+=(psmisc) && \
     KEPT_PACKAGES+=(procps nano) && \
     KEPT_PACKAGES+=(python-pip) && \
