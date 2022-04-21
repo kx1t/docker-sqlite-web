@@ -1,4 +1,4 @@
-FROM debian:buster-20220328-slim
+FROM debian:buster-20220418-slim
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
